@@ -1,0 +1,9 @@
+apicache-py3
+logs
+naples_physicians.pkl
+wikidata_physicians.pkl
+pywikibot.lwp
+test
+throttle.ctrl
+user-config.py
+user-password.py
