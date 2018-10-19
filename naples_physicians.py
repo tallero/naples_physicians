@@ -88,7 +88,7 @@ class Physician:
         for i in range(1,25149):
             if i % 1000 == 0:
                 print(i)
-            physicians.append(get_data(i))
+            physicians.append(get_from_website(i))
 
         save(physicians, 'naples_physicians.pkl')
 
