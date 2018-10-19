@@ -81,6 +81,7 @@ class WikidataPhysicians:
         physicians = self.get_all()
         save(physicians, 'wikidata_physicians.pkl')
 
-physician = WikidataPhysician()
-physician.save_all_to_disk()
+if __name__ == "__main__":
+    physician = WikidataPhysician()
+    physician.save_all_to_disk()
 

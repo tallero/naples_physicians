@@ -92,4 +92,5 @@ class Physician:
 
         save(physicians, 'naples_physicians.pkl')
 
-Physician().save_all_to_disk()
+if __name__ == "__main__":
+    Physician().save_all_to_disk()
