@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#    Wikidata Physicians
+#    Wikidata Physician
 #
 #    ----------------------------------------------------------------------
 #    Copyright © 2018  Pellegrino Prevete
@@ -44,7 +44,11 @@ def save(variable, path):
     f.close()
 
 
-class WikidataPhysicians:
+class WikidataPhysician:
+    def __init__(self):
+        site = Site('wikidata', 'wikidata')
+        self.repo = site.data_repository()
+
     def get_all(self):
         physician = 'Q39631'
         
@@ -76,6 +80,10 @@ class WikidataPhysicians:
                 pprint(e)
             physicians = physicians.union(results)
         return physicians
+
+    def get_name(physician):
+        item = pywikibot.ItemPage(self.repo, 'Q42')
+
 
     def save_all_to_disk(self):
         physicians = self.get_all()
